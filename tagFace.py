@@ -166,7 +166,7 @@ def clickOutput():
 		sys.exit(0)
 
 def initialCanvas(imagePath):
-	print("======================================')
+	print("======================================")
 	print(imagePath)
 
 	global tk, canvas, picture, maxCoordinateX, maxCoordinateY, image_width, image_height, resize_ratio
@@ -208,8 +208,8 @@ def initialCanvas(imagePath):
 	button0.configure(activebackground="#33B5E5", relief=SUNKEN)
 	canvas.create_window(10, 10, anchor=NW, window=button0)
 	# Create "Clear" button
-	button1 = Button(text = "Clear", anchor=CENTER, bd=2)
-	button1.configure(activebackground="#33B5E5", relief=SUNKEN, command=clickClear)
+	button1 = Button(text = "Clear", anchor=CENTER, bd=2, command=clickClear)
+	button1.configure(activebackground="#33B5E5", relief=SUNKEN)
 	canvas.create_window(65, 10, anchor=NW, window=button1)
 	# Create "Ouput Coordinate" button
 	button2 = Button(text = "Ouput Coordinate", anchor=CENTER, bd=2, command=clickOutput)
